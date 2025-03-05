@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鍵盤測試器</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900">
+    <header class="container mx-auto px-4 py-8 max-w-6xl">
+        <h1 class="text-3xl font-bold text-center mb-2">鍵盤測試器</h1>
+        <p class="text-center mb-6 text-gray-600 dark:text-gray-400">按下任意鍵以測試您的鍵盤</p>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 max-w-6xl">
+        <section class="info-box mb-6 text-center">
+            <h2 class="text-xl font-semibold mb-2">最後按下的鍵</h2>
+            <div id="lastKeyContainer" class="flex justify-center items-center">
+                <div id="lastKey" class="text-5xl font-bold h-24 flex items-center justify-center">
+                    <span class="text-gray-400 dark:text-gray-500">請按下任意鍵</span>
+                </div>
+            </div>
+            <div class="mt-3">
+                <div class="text-sm text-gray-600 dark:text-gray-400">
+                    <span>鍵: <span id="keyName" class="font-mono">-</span></span> · 
+                    <span>代碼: <span id="keyCode" class="font-mono">-</span></span> ·
+                    <span>位置: <span id="keyLocation" class="font-mono">-</span></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div class="stat-box">
+                <h3 class="font-semibold mb-1">按下的鍵數</h3>
+                <p id="keysPressed" class="text-3xl font-bold">0</p>
+            </div>
+            <div class="stat-box">
+                <h3 class="font-semibold mb-1">獨特鍵數</h3>
+                <p id="uniqueKeys" class="text-3xl font-bold">0</p>
+            </div>
+            <div class="stat-box">
+                <h3 class="font-semibold mb-1">% 鍵盤測試</h3>
+                <p id="keyboardPercentage" class="text-3xl font-bold">0%</p>
+            </div>
+        </section>
+
+        <section class="overflow-x-auto">
+            <div id="keyboard" class="inline-block min-w-full keyboard-container">
+                <!-- Keyboard layout remains the same -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
